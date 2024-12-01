@@ -144,9 +144,7 @@ void Nanodet::resize_uniform(cv::Mat &src, cv::Mat &resized_img, cv::Size dstsiz
     }
 
     cv::Mat tmp;
-    printf("$$");
     cv::resize(src, tmp, cv::Size(tmp_w, tmp_h)); // 在保持了宽高比的同时 将图像的宽设置为416
-    printf("\n@@");
     if (tmp_w != dst_w)
     {
         int index_w = floor((dst_w - tmp_w) / 2.0);
@@ -203,7 +201,7 @@ void Nanodet::generate_grid_center_priors(int newh, int neww, vector<int> stride
 
     for (int i = 0; i < 3; i++)
     {
-        cout << " i is " << i << endl;
+        // cout << " i is " << i << endl;
         const int stride = strides[i];
         int feat_w = ceil((float)neww / stride);
         int feat_h = ceil((float)newh / stride);
