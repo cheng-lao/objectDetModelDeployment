@@ -54,7 +54,6 @@ int main(int argc, char const *argv[])
     // cv::Mat img = cv::imread("/home/chengyingjie666/code/objectDetModelDeployment/image/2925.jpg");
     // cv::VideoCapture video("/home/chengyingjie666/code/objectDetModelDeployment/video/video_zhuangjiaban.mp4");
 
-
     switch (mode) {
         case 1:
             image_display(path, nanodet);
